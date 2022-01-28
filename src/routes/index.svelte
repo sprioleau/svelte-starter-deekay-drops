@@ -15,21 +15,13 @@
 <script>
 	import Card from '../components/Card.svelte';
 	export let drops;
-	export let cardWidth = 150;
+	export const imageWidth = 150;
 </script>
 
 <section>
-	<ul class="grid" style={`grid-template-columns: repeat(auto-fit, minmax(${cardWidth}px, 1fr))`}>
+	<ul class="grid" style={`grid-template-columns: repeat(auto-fit, minmax(${imageWidth}px, 1fr))`}>
 		{#each drops as drop}
-			<Card {drop} {cardWidth} />
+			<Card {drop} {imageWidth} />
 		{/each}
 	</ul>
 </section>
-
-<style>
-	.grid {
-		display: grid;
-		gap: 2.5rem;
-		margin-bottom: 2rem;
-	}
-</style>

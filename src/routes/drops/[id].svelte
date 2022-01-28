@@ -15,16 +15,23 @@
 
 <script>
 	import { fade } from 'svelte/transition';
+	import "../../styles/components/drop.scss"
 	export let drop;
 	export const imageWidth = 400;
 </script>
 
-<article>
-	<main>
+<svelte:head>
+	<title>{drop?.alt} | Deekay Drops</title>
+	<link rel="shortcut icon" href={drop.src} type="image/x-icon">
+</svelte:head>
+
+<article class="drop">
+	<main class="drop__main">
 		<header>
-			<h1>{drop.alt}</h1>
+			<h1 class="drop__title align-center">{drop.alt}</h1>
 		</header>
 		<img
+			class="drop__image"
 			src={`${drop.src}?format=${imageWidth}w`}
 			alt={drop.alt}
 			width={imageWidth}
@@ -40,27 +47,9 @@
 			Purchase on OpenSea
 		</a>
 		<footer>
-			<p class="text-muted">
+			<p class="align-center text-muted">
 				Animation by <a href="https://deekaykwon.com/">DeeKay Kwon</a> (not S. Prioleau)
 			</p>
 		</footer>
 	</main>
 </article>
-
-<style>
-	h1,
-	p {
-		text-align: center;
-	}
-
-	main {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-
-	img {
-		object-fit: contain;
-		width: 100%;
-	}
-</style>

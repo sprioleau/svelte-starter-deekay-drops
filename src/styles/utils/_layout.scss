@@ -1,0 +1,12 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: clamp(1.5rem, 5vw, 3rem);
+}
+
+.grid {
+  display: grid;
+  gap: 2.5rem;
+  margin-bottom: 2rem;
+}

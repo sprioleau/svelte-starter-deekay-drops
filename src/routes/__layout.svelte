@@ -1,7 +1,7 @@
 <script>
 	import Header from '../components/Header.svelte';
 	import Footer from '../components/Footer.svelte';
-	import '../styles/styles.css';
+	import '../styles/styles.scss';
 </script>
 
 <svelte:head>
@@ -15,12 +15,3 @@
 	</main>
 	<Footer />
 </div>
-
-<style>
-	main {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		padding: clamp(2rem, 5vw, 3rem);
-	}
-</style>

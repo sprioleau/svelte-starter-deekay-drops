@@ -1,6 +1,5 @@
 :root {
   --ff: "Source Sans Pro", sans-serif;
-  /* --accent-1: #1f4b66; */
   --accent-1-rgb: 31, 75, 102;
   --accent-1: rgb(var(--accent-1-rgb));
   --accent-1-hover: #3a6d8e;
@@ -48,6 +47,7 @@ h1,
 h2,
 h3 {
   color: var(--accent-1);
+  line-height: 1.1;
 }
 
 a {
@@ -55,21 +55,21 @@ a {
   color: var(--accent-1);
   text-decoration: none;
   transition: color 0.3s ease-out;
-}
 
-a:hover {
-  color: var(--accent-1-hover);
-}
-
-a::after {
-  content: '';
-  position: absolute;
-  bottom: -0.25rem;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: var(--accent-1);
-  z-index: 1;
+  &:hover {
+    color: var(--accent-1-hover);
+  }
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -0.25rem;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--accent-1);
+    z-index: 1;
+  }
 }
 
 button,
@@ -106,13 +106,5 @@ button:hover,
 
 button::after,
 .button::after {
-  display: none;
-}
-
-.text-muted {
-  color: rgba(0, 0, 0, 0.5)
-}
-
-.no-decor::after {
   display: none;
 }
