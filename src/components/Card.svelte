@@ -1,7 +1,7 @@
 <script>
 	import { fade } from 'svelte/transition';
 	export let drop;
-	export let imageWidth;
+	export let imageWidth = 200;
 </script>
 
 <li class="grid__grid-item" transition:fade>
@@ -9,20 +9,13 @@
 		<a href={`/drops/${drop.number}`}>
 			<main>
 				<div class="grid__grid-item__image-wrapper">
-					<div
-						style={{
-							width: imageWidth,
-							height: imageWidth
-						}}
-					>
-						<img
-							class="grid__grid-item__image"
-							src={`${drop.src}?format=${imageWidth}w`}
-							alt={drop.alt}
-							width={imageWidth}
-							height={imageWidth}
-						/>
-					</div>
+					<img
+						class="grid__grid-item__image"
+						src={`${drop.src}?format=${imageWidth}w`}
+						alt={drop.alt}
+						width={imageWidth}
+						height={imageWidth}
+					/>
 				</div>
 			</main>
 			<footer class="grid__grid-item-footer">
@@ -66,14 +59,11 @@
 			0 10px 20px rgba(var(--accent-1-rgb), 0.15);
 		z-index: -1;
 	}
-
-	.grid__grid-item__image-wrapper {
-		overflow: hidden;
-		border-radius: 0.5rem;
-	}
-
+	
 	.grid__grid-item__image {
+		border-radius: 0.5rem;
 		width: 100%;
+		height: auto;
 	}
 
 	.grid__grid-item-footer {
