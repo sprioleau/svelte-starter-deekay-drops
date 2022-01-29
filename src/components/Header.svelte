@@ -5,7 +5,7 @@
 
 <nav class="nav">
 	<a href="/" class="no-decor">
-		<img src="deekay-logo.png" alt="DeeKay Logo" class="nav__logo" width={imageWidth} height={imageWidth} />
+		<img src="/deekay-logo.png" alt="DeeKay Logo" class="nav__logo" width={imageWidth} height={imageWidth} />
 	</a>
 	<a href="/" class="no-decor">
 		<h1 class="nav__title">Deekay Drops</h1>
