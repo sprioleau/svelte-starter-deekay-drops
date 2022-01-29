@@ -4,14 +4,17 @@
   position: relative;
   transform: translateY(var(--translateY));
   transition: transform 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+	z-index: 1;
 
-  &:hover {
-    --translateY: -5px;
-  }
-
-  &:hover::before {
-    --opacity: 1;
-  }
+	@media (hover: hover) {
+		&:hover {
+			--translateY: -5px;
+		}
+	
+		&:hover::before {
+			--opacity: 1;
+		}
+	}
 
   &::before {
 		content: '';
