@@ -11,6 +11,6 @@
 		<h1 class="nav__title">DeeKay Drops</h1>
 	</a>
 	<p class="text-muted align-center">
-		A small Svelte starter app by <a href="https://www.sprioleau.dev/">S. Prioleau</a>. <br /> Logo and all GIFs by <a href="https://deekaykwon.com/">DeeKay Kwon</a>.
+		A small SvelteKit starter app by <a href="https://www.sprioleau.dev/">S. Prioleau</a>. <br /> Logo and all GIFs by <a href="https://deekaykwon.com/">DeeKay Kwon</a>.
 	</p>
 </nav>
