@@ -1,6 +1,7 @@
 {
 	"name": "deekay-drops",
 	"version": "0.0.1",
+	"description": "A small Remix starter app by San'Quan Prioleau",
 	"scripts": {
 		"dev": "svelte-kit dev",
 		"build": "svelte-kit build",
