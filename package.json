@@ -1,7 +1,24 @@
 {
-	"name": "deekay-drops",
+	"name": "@sprioleau/svelte-starter-deekay-drops",
 	"version": "0.0.1",
-	"description": "A small Remix starter app by San'Quan Prioleau",
+	"description": "A small SvelteKit starter app by San'Quan Prioleau",
+	"author": "San'Quan Prioleau <sq.prioleau@gmail.com>",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/sprioleau/svelte-starter-deekay-drops.git"
+	},
+	"keywords": [
+		"GIFs",
+		"DeeKay Kwon",
+		"LETSWALK",
+		"Svelte",
+		"SvelteKit",
+		"starter",
+		"SSG",
+		"SSR"
+	],
+	"contributors": [],
+	"homepage": "https://deekay-drops-svelte.netlify.app",
 	"scripts": {
 		"dev": "svelte-kit dev",
 		"build": "svelte-kit build",
