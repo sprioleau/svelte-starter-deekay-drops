@@ -1,8 +1,7 @@
 <script context="module">
-	import { scrapeImages } from '../loaders/scrapeImages';
-
 	export async function load({ fetch }) {
-		const drops = await scrapeImages(fetch);
+		const response = await fetch("index.json");
+		const { drops } = await response.json();
 
 		return {
 			props: {

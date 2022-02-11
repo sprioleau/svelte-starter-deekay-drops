@@ -1,9 +1,7 @@
 <script context="module">
-	import { scrapeImages } from '../../loaders/scrapeImages';
-
 	export async function load({ fetch, params }) {
-		const drops = await scrapeImages(fetch);
-		const drop = drops.find(({ number }) => number === params.id);
+		const response = await fetch(`${params.id}.json`);
+		const { drop } = await response.json();
 
 		return {
 			props: {
@@ -21,8 +19,10 @@
 </script>
 
 <svelte:head>
-	<title>{drop?.alt} | Deekay Drops</title>
-	<link rel="shortcut icon" href={drop.src} type="image/x-icon">
+	{#if drop}
+		<title>{drop.alt} | Deekay Drops</title>
+		<link rel="shortcut icon" href={drop.src} type="image/x-icon">
+	{/if}
 </svelte:head>
 
 <article class="drop">
