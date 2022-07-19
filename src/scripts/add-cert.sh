@@ -1,0 +1,2 @@
+# https://github.com/puppeteer/puppeteer/issues/4752
+sudo codesign --deep -s Puppeteer -f "/Users/f003rbm/Projects/deekay-drops-svelte/node_modules/puppeteer/.local-chromium/mac-1011831/chrome-mac/Chromium.app/"

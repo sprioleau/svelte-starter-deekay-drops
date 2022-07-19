@@ -2,6 +2,7 @@
 	export async function load({ fetch, params }) {
 		const response = await fetch(`${params.id}.json`);
 		const { drop } = await response.json();
+		console.log('drop:', drop)
 
 		return {
 			props: {
@@ -38,14 +39,16 @@
 			height={imageWidth}
 			transition:fade
 		/>
-		<a
-			class="button"
-			href="https://opensea.io/collection/letswalk"
-			target="_blank"
-			rel="noreferrer"
-		>
-			Purchase on OpenSea
-		</a>
+		{#if drop.openSeaUrl}
+			 <a
+				 class="button"
+				 href={drop.openSeaUrl}
+				 target="_blank"
+				 rel="noreferrer"
+			 >
+				 Purchase on OpenSea
+			 </a>
+		{/if}
 		<footer>
 			<p class="align-center text-muted">
 				Animation by <a href="https://deekaykwon.com/">DeeKay Kwon</a> (not S. Prioleau)

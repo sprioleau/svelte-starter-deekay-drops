@@ -1,11 +1,12 @@
 <script context="module">
+	
 	export async function load({ fetch }) {
 		const response = await fetch("index.json");
 		const { drops } = await response.json();
-
+		
 		return {
 			props: {
-				drops
+				drops,
 			}
 		};
 	}

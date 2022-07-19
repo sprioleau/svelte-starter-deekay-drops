@@ -1,26 +1,13 @@
-import { load } from 'cheerio';
+import { DOMAIN } from "src/constants";
 
-const getDrops = async () => {
-	const scrapeUrl = 'https://deekaykwon.com/letswalk';
-
+const getDrops = async (url = DOMAIN) => {
 	try {
-		const response = await fetch(scrapeUrl);
-		const html = await response.text();
-		const $ = load(html);
-		const images = [];
-
-		$('.image-block-wrapper img').each((i, image) => {
-			const src = $(image).attr('data-image');
-			const alt = $(image).attr('alt');
-			const [name, number] = alt.split(' #');
-
-			if (alt) images.push({ src, alt, name, number });
-		});
-
-		return { images, error: null };
+		const response = await fetch(`${url}/data/drops.json`);
+		const drops = await response.json();
+		return { drops, error: null };
 	} catch (error) {
 		console.error(error);
-		return { images: null, error };
+		return { drops: null, error };
 	}
 };
 
