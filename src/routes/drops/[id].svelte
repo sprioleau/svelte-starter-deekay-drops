@@ -2,7 +2,6 @@
 	export async function load({ fetch, params }) {
 		const response = await fetch(`${params.id}.json`);
 		const { drop } = await response.json();
-		console.log('drop:', drop)
 
 		return {
 			props: {
@@ -21,20 +20,20 @@
 
 <svelte:head>
 	{#if drop}
-		<title>{drop.alt} | Deekay Drops</title>
-		<link rel="shortcut icon" href={drop.src} type="image/x-icon">
+		<title>{drop.full_name} | Deekay Drops</title>
+		<link rel="shortcut icon" href={drop.image_url} type="image/x-icon">
 	{/if}
 </svelte:head>
 
 <article class="drop">
 	<main class="drop__main">
 		<header>
-			<h1 class="drop__title align-center">{drop.alt}</h1>
+			<h1 class="drop__title align-center">{drop.full_name}</h1>
 		</header>
 		<img
 			class="drop__image"
-			src={`${drop.src}?format=${imageWidth}w`}
-			alt={drop.alt}
+			src={`${drop.image_url}?format=${imageWidth}w`}
+			alt={drop.full_name}
 			width={imageWidth}
 			height={imageWidth}
 			transition:fade
@@ -42,7 +41,7 @@
 		{#if drop.openSeaUrl}
 			 <a
 				 class="button"
-				 href={drop.openSeaUrl}
+				 href={drop.open_sea_url}
 				 target="_blank"
 				 rel="noreferrer"
 			 >
