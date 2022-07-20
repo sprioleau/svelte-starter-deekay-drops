@@ -2,7 +2,9 @@ import adapter from '@sveltejs/adapter-netlify';
 
 const config = {
 	kit: {
-		adapter: adapter(),
+		adapter: adapter({
+			out: "build"
+		}),
 		target: '#svelte'
 	}
 };
