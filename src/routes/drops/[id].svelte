@@ -27,25 +27,25 @@
 
 <article class="drop">
 	<main class="drop__main">
-		<header>
-			<h1 class="drop__title align-center">{drop.full_name}</h1>
-		</header>
-		<img
-			class="drop__image"
-			src={`${drop.image_src}?format=${imageWidth}w`}
-			alt={drop.full_name}
-			width={imageWidth}
-			height={imageWidth}
-			transition:fade
-		/>
-		{#if drop.openSeaUrl}
+		{#if drop}
+			<header>
+				<h1 class="drop__title align-center">{drop.full_name}</h1>
+			</header>
+			<img
+				class="drop__image"
+				src={`${drop.image_src}?format=${imageWidth}w`}
+				alt={drop.full_name}
+				width={imageWidth}
+				height={imageWidth}
+				transition:fade
+			/>
 			 <a
 				 class="button"
 				 href={drop.open_sea_url}
 				 target="_blank"
 				 rel="noreferrer"
 			 >
-				 Purchase on OpenSea
+				Purchase on OpenSea
 			 </a>
 		{/if}
 		<footer>
