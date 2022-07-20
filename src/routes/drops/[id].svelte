@@ -21,7 +21,7 @@
 <svelte:head>
 	{#if drop}
 		<title>{drop.full_name} | Deekay Drops</title>
-		<link rel="shortcut icon" href={drop.image_url} type="image/x-icon">
+		<link rel="shortcut icon" href={drop.image_src} type="image/x-icon">
 	{/if}
 </svelte:head>
 
@@ -32,7 +32,7 @@
 		</header>
 		<img
 			class="drop__image"
-			src={`${drop.image_url}?format=${imageWidth}w`}
+			src={`${drop.image_src}?format=${imageWidth}w`}
 			alt={drop.full_name}
 			width={imageWidth}
 			height={imageWidth}

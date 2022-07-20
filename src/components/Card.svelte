@@ -12,7 +12,7 @@
 				<div class="grid__grid-item__image-wrapper">
 					<img
 						class="grid__grid-item__image"
-						src={`${drop.image_url}=w${imageWidth}`}
+						src={`${drop.image_src}=w${imageWidth}`}
 						alt={drop.full_name}
 						width={imageWidth}
 						height={imageWidth}

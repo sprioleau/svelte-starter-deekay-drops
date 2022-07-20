@@ -1,6 +1,7 @@
+import { getDrops } from "../utils";
+
 export async function get() {
-	const response = await fetch("http://localhost:3000/data/drops.json");
-	const drops = await response.json();
+	const drops = await getDrops();
 
 	return {
 		status: 200,

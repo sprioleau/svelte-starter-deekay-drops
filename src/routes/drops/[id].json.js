@@ -1,8 +1,7 @@
-import { DOMAIN } from "../../constants";
+import { getDrops } from "../../utils";
 
 export async function get({ params }) {
-	const response = await fetch(`${DOMAIN}/data/drops.json`);
-	const drops = await response.json();
+	const drops = await getDrops();
 
 	const drop = drops.find(({ number }) => number === params.id);
 
