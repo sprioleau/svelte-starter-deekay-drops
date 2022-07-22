@@ -5,6 +5,7 @@
   transform: translateY(var(--translateY));
   transition: transform 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
 	z-index: 1;
+	max-width: 200px;
 
 	@media (hover: hover) {
 		&:hover {

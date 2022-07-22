@@ -16,6 +16,7 @@
 						alt={drop.full_name}
 						width={imageWidth}
 						height={imageWidth}
+						loading="lazy"
 					/>
 				</div>
 			</main>

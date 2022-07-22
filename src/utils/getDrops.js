@@ -11,7 +11,7 @@ const getDrops = async () => {
     
   const { drops } = await response.json();
 
-  return drops.filter(({ image_src }) => !image_src.trim().startsWith("data"));
+  return (drops ?? []).filter(({ image_src }) => !image_src.trim().startsWith("data"));
 }
 
 export default getDrops;
